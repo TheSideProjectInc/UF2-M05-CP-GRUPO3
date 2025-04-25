@@ -36,6 +36,11 @@ public class Vehiculo {
         velocidad_actual = 0;
     }
 
+    public boolean esDeportivo() {
+        // Método pendiente de implementación
+        return false;
+    }
+
 
 }
 
