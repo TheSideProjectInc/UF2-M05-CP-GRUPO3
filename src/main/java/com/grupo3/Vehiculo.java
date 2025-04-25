@@ -17,11 +17,11 @@ public class Vehiculo {
 
     public void frenar(int decremento) {
         if (decremento < 0) {
-            return;
+            return; // Ignorar si decremento es negativo
         }else if(velocidad_actual - decremento < 0) {
-            velocidad_actual = 0;
+            velocidad_actual = 0; // Ajustar velocidad a 0 si sería negativa
         } else {
-            velocidad_actual -= decremento;
+            velocidad_actual -= decremento; // Resta normal en cualquier caso válido
         }
     }
 
