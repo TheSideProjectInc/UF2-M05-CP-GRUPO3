@@ -16,7 +16,13 @@ public class Vehiculo {
     }
 
     public void acelerar(int incremento) {
+        if (incremento < 0) {
+            // Ignorar aceleración negativa
+            return;
+        }
+
         velocidad_actual += incremento;
+
         if (velocidad_actual > velocidad_maxima) {
             velocidad_actual = velocidad_maxima;
         }
@@ -26,5 +32,6 @@ public class Vehiculo {
         return velocidad_actual;
     }
 }
+
 
 
