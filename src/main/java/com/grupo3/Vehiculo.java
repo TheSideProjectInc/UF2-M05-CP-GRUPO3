@@ -9,7 +9,11 @@ public class Vehiculo {
     private boolean pasajeros;
 
     public void frenar(int decremento) {
-            // método pendiente de desarrollo
-            return velocidad_actual;
+        if (velocidad_actual - decremento < 0) {
+            velocidad_actual = 0;
+        } else {
+            velocidad_actual -= decremento;
         }
+    }
+
 }
