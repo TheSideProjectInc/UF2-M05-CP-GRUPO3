@@ -32,7 +32,10 @@ public class Vehiculo {
         return velocidad_actual;
     }
 
-    public void parar() {}
+    public void parar() {
+        velocidad_actual = 0;
+    }
+
 
 }
 
