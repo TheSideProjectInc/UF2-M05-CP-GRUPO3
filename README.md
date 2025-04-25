@@ -19,7 +19,7 @@ Este proyecto consiste en desarrollar una clase **Vehículo** usando **Test Driv
 - modelo: String (ej. "Corolla").
 - velocidad_actual: int (km/h, inicial 0).
 - velocidad_maxima: int (límite del vehículo).
-- tuneado: boolean (indica si está modificado).
+- deportivo: boolean (indica si es deportivo).
 - pasajeros: int (capacidad de ocupantes).
 
 ## Métodos:
@@ -27,7 +27,11 @@ Este proyecto consiste en desarrollar una clase **Vehículo** usando **Test Driv
 - acelerar(int incremento): Aumenta la velocidad sin superar velocidad_maxima.
 - frenar(int decremento): Reduce la velocidad (sin bajar de 0).
 - parar(): Detiene el vehículo (velocidad_actual = 0).
-- esTuneado(): Devuelve true si el vehículo está tuneado.
+- esDeportivo(): Devuelve true si el vehículo es deportivo.
+- getInfo(): Devuelve todos los datos del vehículo.
+- esMarca(): Revisa si el vehículo es la marca indicada.
+- esModelo(): Revisa si el vehículo es el modelo indicado.
+- esIgual(): Compara 2 vehículos.
 - Getter/Setter de velocidad_actual: getVelocidadActual() y setVelocidadActual().
-- Getter/Setter de velocidad_maxima: getVelocidadMaxima() y setVelocidadMaxima().
-- Getter/Setter de tuneado: getTuneado() y setTuneado().
+- Getter/Setter de velocidad_maxima: getVelocidadMaxima() y setVelocidadMaxima() (Si es deportivo sera mayor).
+- Getter de deportivo: getDeportivo().
