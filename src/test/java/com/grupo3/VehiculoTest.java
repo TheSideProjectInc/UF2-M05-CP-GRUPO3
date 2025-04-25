@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class VehiculoTest {
     @Test
     public void testMarcaCoincide(){
-        // test para identificar que el metodo esMarca() es correcto.
+        Vehiculo vehiculo = new Vehiculo("Chevrolet", "Camaro", 100);
+        assertTrue(vehiculo.esMarca("chevrolet"));
     }
 }
