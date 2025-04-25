@@ -7,5 +7,12 @@ public class Vehiculo {
     private int velocidad_maxima;
     private boolean deportivo;
     private boolean pasajeros;
+
+    public void acelerar(int incremento) {}
+
+    public int getVelocidadActual() {
+        return 0;
+    }
   
 }
+
