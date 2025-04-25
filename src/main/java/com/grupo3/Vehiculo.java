@@ -42,8 +42,12 @@ public class Vehiculo {
 
 
     public String getInfo() {
-        // Método pendiente de implementación
-        return "";
+        return "Marca: " + marca +
+                ", Modelo: " + modelo +
+                ", Velocidad Actual: " + velocidad_actual +
+                ", Velocidad Máxima: " + velocidad_maxima +
+                ", Deportivo: " + deportivo +
+                ", Pasajeros: " + pasajeros;
     }
 
 
