@@ -8,8 +8,8 @@ public class Vehiculo {
     private boolean deportivo;
     private boolean pasajeros;
 
- public void frenar(int decremento){
-        //método pendiente de impmentar
-     return velocidad_actual;
-    }
+    public void frenar(int decremento) {
+            // método pendiente de desarrollo
+            return velocidad_actual;
+        }
 }
