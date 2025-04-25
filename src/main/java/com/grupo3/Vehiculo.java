@@ -37,8 +37,7 @@ public class Vehiculo {
     }
 
     public boolean esDeportivo() {
-        // Método pendiente de implementación
-        return false;
+        return deportivo;
     }
 
 
