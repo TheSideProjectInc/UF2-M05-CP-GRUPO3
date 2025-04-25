@@ -15,8 +15,14 @@ public class Vehiculo {
         this.velocidad_actual = 0;
     }
 
-    public boolean esMarca(int marca) {
-        // metodo para comparar si la marca del vehículo coincide con el valor introducido
+    public boolean esMarca(String marca) {
+        marca = marca.toUpperCase(); //transforma el String de la marca a comprobar en mayusculas
+        this.marca = this.marca.toUpperCase(); //transforma el String de la marca del objeto vehículo a mayusculas
+        if (marca.equals(this.marca)) { //compara las dos cadenas de texto en mayusuculas de la marca del vehiculo y de la marca que queremos comprobar.
+            return true;
+        }else {
+            return false;
+        }
     }
 }
 
