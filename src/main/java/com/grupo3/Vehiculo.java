@@ -3,36 +3,40 @@ package com.grupo3;
 public class Vehiculo {
     private String marca;
     private String modelo;
-
     private int velocidad_actual;
     private int velocidad_maxima;
     private boolean deportivo;
     private boolean pasajeros;
 
-    public Vehiculo(String marca, String modelo) {
+    public Vehiculo(String marca, String modelo, int velocidad_maxima) {
         this.marca = marca;
         this.modelo = modelo;
+        this.velocidad_maxima = velocidad_maxima;
+        this.velocidad_actual = 0;
     }
 
-    public String getMarca() {
-        return marca;
+    public void acelerar(int incremento) {
+        if (incremento < 0) {
+            // Ignorar aceleración negativa
+            return;
+        }
+
+        velocidad_actual += incremento;
+
+        if (velocidad_actual > velocidad_maxima) {
+            velocidad_actual = velocidad_maxima;
+        }
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
+    public int getVelocidadActual() {
+        return velocidad_actual;
     }
 
-    public String getModelo() {
-        return modelo;
+    public void parar() {
+        velocidad_actual = 0;
     }
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
-    public void mostrarDetalles() {
-        System.out.println("Marca: " + marca);
-        System.out.println("Modelo: " + modelo);
-    }
 
 }
+
+
