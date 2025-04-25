@@ -31,6 +31,9 @@ public class Vehiculo {
     public int getVelocidadActual() {
         return velocidad_actual;
     }
+
+    public void parar() {}
+
 }
 
 
