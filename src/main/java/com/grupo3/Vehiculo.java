@@ -41,6 +41,14 @@ public class Vehiculo {
     }
 
 
+    public String getInfo() {
+        // Método pendiente de implementación
+        return "";
+    }
+
+
+
+
 }
 
 
