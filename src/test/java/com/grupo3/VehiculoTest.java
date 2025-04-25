@@ -38,5 +38,10 @@ public class VehiculoTest {
         assertFalse(v2.esDeportivo(), "Toyota no debe ser deportivo")
     }
 
+    @Test
+    public void testGetInfo() {
+        // Test pendiente de implementación
+    }
+
 
 }
