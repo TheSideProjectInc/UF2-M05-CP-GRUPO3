@@ -1,0 +1,23 @@
+name: CI - Java Tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '21'  # se puede cambiar si no funciona con esta version
+
+      - name: Install dependencies
+        run: mvn install
+
+      - name: Run tests
+        run: mvn test
