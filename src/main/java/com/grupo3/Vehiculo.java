@@ -7,5 +7,10 @@ public class Vehiculo {
     private int velocidad_maxima;
     private boolean deportivo;
     private boolean pasajeros;
+
+    public String getInfo() {
+        //Metodo pendiente de implementacion 
+        return null;
+    }
   
 }
