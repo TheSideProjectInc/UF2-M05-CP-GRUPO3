@@ -24,3 +24,6 @@ jobs:
 
       - name: Run tests
         run: mvn test
+
+      - name: Verify Java installation
+        run: java -version && mvn -version  # Verificacion para que Java y Maven están instalados correctamente
