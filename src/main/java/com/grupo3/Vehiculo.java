@@ -7,5 +7,10 @@ public class Vehiculo {
     private int velocidad_maxima;
     private boolean deportivo;
     private boolean pasajeros;
+
+    public void parar() {
+    // Método sin implementar
+}
+
   
 }
