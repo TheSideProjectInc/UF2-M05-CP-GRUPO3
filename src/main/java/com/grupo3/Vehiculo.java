@@ -7,5 +7,10 @@ public class Vehiculo {
     private int velocidad_maxima;
     private boolean deportivo;
     private boolean pasajeros;
+
+//se añade metodo para definir si un coche es deportivo 
+    public boolean esDeportivo() {
+        //pendiente de implementacion 
+    }
   
 }
