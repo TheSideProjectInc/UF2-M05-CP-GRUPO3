@@ -11,4 +11,11 @@ public class Vehiculo {
     public int getVelocidadActual() {
         return velocidad_actual;
     }
+    
+    public void setVelocidadActual(int velocidad_actual) {
+        if (velocidad_actual >= 0 && velocidad_actual <= this.velocidad_maxima) {
+            this.velocidad_actual = velocidad_actual;
+    }
+        
+    }
 }
