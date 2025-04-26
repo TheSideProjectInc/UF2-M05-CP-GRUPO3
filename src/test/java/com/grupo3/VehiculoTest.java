@@ -43,7 +43,18 @@ public class VehiculoTest {
         assertEquals(0, v.getVelocidadActual(), "La velocidad debe ser 0 después de parar");
 
   }
-  
+      
+  @Test
+    public void testGetInfo() {
+        Vehiculo v = new Vehiculo("Tesla", "Model S", 250, true, 5);
+        String info = v.getInfo();
+
+        assertTrue(info.contains("Tesla"));
+        assertTrue(info.contains("Model S"));
+        assertTrue(info.contains("250"));
+        assertTrue(info.contains("true"));
+        assertTrue(info.contains("5"));
+    }
   @Test
   public void testEsDeportivo() {
     Vehiculo v1 = new Vehiculo("Ferrari", "488", 300, true, 2);

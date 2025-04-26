@@ -8,7 +8,6 @@ public class Vehiculo {
     private boolean deportivo;
     private boolean pasajeros;
 
-
   public Vehiculo(String marca, String modelo, int velocidad_maxima, boolean deportivo) {
         this.marca = marca;
         this.modelo = modelo;
@@ -51,9 +50,16 @@ public class Vehiculo {
      }
   
   //se añade metodo para definir si un coche es deportivo 
-    public boolean esDeportivo() {
+  public boolean esDeportivo() {
         return deportivo;
     }
+  
+  public String getInfo() {
+        return "Marca: " + marca +
+                ", Modelo: " + modelo +
+                ", Velocidad Actual: " + velocidad_actual +
+                ", Velocidad Máxima: " + velocidad_maxima +
+                ", Deportivo: " + deportivo +
+                ", Pasajeros: " + pasajeros;
+    }
 }
-
-
