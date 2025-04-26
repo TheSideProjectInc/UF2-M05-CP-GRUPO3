@@ -9,8 +9,7 @@ public class Vehiculo {
     private boolean pasajeros;
 
     public void parar() {
-    // Método sin implementar
-}
+         velocidad_actual = 0;
+     }
 
-  
 }
