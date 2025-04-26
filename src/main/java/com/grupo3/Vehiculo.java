@@ -10,6 +10,17 @@ public class Vehiculo {
 
 
 public void acelerar(int incremento) {
-    // Método pendiente de implementación
+    // Validar que el incremento no sea negativo
+    if (incremento < 0) {
+        System.out.println("Error: No se puede acelerar con un valor negativo.");
+        return;
+    }
+
+    // Se aumenta la velocidad sin superar el límite máximo
+    velocidad_actual += incremento;
+
+    // Se ajusta si supera la velocidad máxima permitida
+    if (velocidad_actual > velocidad_maxima) {
+        velocidad_actual = velocidad_maxima;
  }
 }
