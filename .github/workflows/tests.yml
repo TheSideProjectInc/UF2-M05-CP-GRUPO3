@@ -22,6 +22,10 @@ jobs:
       - name: Verify Java installation
         run: java -version && mvn -version  # Verifica que Java y Maven están instalados correctamente
 
+        # Moverse a la carpeta donde se encuentra el pom.xml, en este caso "src"
+      - name: Move to project directory (src)
+        run: cd src && pwd && ls -la
+
       - name: Install dependencies
         run: mvn install
 
