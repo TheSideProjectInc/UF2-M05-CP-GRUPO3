@@ -12,7 +12,9 @@ public class VehiculoTest {
 
     @Test
     public void testAceleracionExcedeMaximo() {
-        // Test pendiente de implementación
+        Vehiculo v = new Vehiculo("Toyota", "Corolla", 100, 120, false, 5);
+        v.acelerar(30); // Intentar acelerar más allá del límite
+        assertEquals(120, v.getVelocidadActual(), "La velocidad no debe superar el máximo permitido");
     }
 
     @Test
