@@ -9,8 +9,12 @@ public class Vehiculo {
     private boolean pasajeros;
 
     public String getInfo() {
-        //Metodo pendiente de implementacion 
-        return null;
+        return "Marca: " + marca +
+                ", Modelo: " + modelo +
+                ", Velocidad Actual: " + velocidad_actual +
+                ", Velocidad Máxima: " + velocidad_maxima +
+                ", Deportivo: " + deportivo +
+                ", Pasajeros: " + pasajeros;
     }
   
 }
