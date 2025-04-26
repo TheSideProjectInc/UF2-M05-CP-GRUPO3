@@ -19,7 +19,9 @@ public class VehiculoTest {
 
     @Test
     public void testAceleracionNegativa() {
-        // Test pendiente de implementación
+        Vehiculo v = new Vehiculo("Toyota", "Corolla", 50, 120, false, 5);
+        v.acelerar(-10); // Intentar acelerar con un valor negativo
+        assertEquals(50, v.getVelocidadActual(), "La velocidad debe permanecer igual si el incremento es negativo");
     }
 }
 
