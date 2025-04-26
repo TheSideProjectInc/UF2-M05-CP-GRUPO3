@@ -7,5 +7,9 @@ public class Vehiculo {
     private int velocidad_maxima;
     private boolean deportivo;
     private boolean pasajeros;
-  
+
+
+    public boolean esIgual(Vehiculo otro) {
+
+    }
 }
