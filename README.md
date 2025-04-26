@@ -20,7 +20,6 @@ Este proyecto consiste en desarrollar una clase **Vehículo** usando **Test Driv
 - velocidad_actual: int (km/h, inicial 0).
 - velocidad_maxima: int (límite del vehículo).
 - deportivo: boolean (indica si es deportivo).
-- pasajeros: int (capacidad de ocupantes).
 
 ## Métodos:
 
