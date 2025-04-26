@@ -44,6 +44,10 @@ public class Vehiculo {
             velocidad_actual -= decremento; // Resta normal en cualquier caso válido
         }
     }
+  //se añade metodo para definir si un coche es deportivo 
+    public boolean esDeportivo() {
+        return deportivo;
+    }
 }
 
 
