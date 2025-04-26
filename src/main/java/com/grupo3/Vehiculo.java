@@ -8,14 +8,24 @@ public class Vehiculo {
     private boolean deportivo;
     private boolean pasajeros;
 
-    public Vehiculo(String marca, String modelo, int velocidad_maxima, int velocidad_actual) {
+    public Vehiculo(String marca, String modelo, int velocidad_maxima) {
         this.marca = marca;
         this.modelo = modelo;
         this.velocidad_maxima = velocidad_maxima;
-        this.velocidad_actual = velocidad_actual;
+        this.velocidad_actual = 0;
     }
 
-    public void frenar(int decremento) {
+    public boolean esMarca(String marca) {
+        marca = marca.toUpperCase(); //transforma el String de la marca a comprobar en mayusculas
+        this.marca = this.marca.toUpperCase(); //transforma el String de la marca del objeto vehículo a mayusculas
+        if (marca.equals(this.marca)) { //compara las dos cadenas de texto en mayusuculas de la marca del vehiculo y de la marca que queremos comprobar.
+            return true;
+        }else {
+            return false;
+        }
+    }
+  
+      public void frenar(int decremento) {
         if (decremento < 0) {
             return; // Ignorar si decremento es negativo
         }else if(velocidad_actual - decremento < 0) {
@@ -25,7 +35,6 @@ public class Vehiculo {
         }
     }
 
-    public int getVelocidadActual() {
-        return velocidad_actual;
-    }
 }
+
+

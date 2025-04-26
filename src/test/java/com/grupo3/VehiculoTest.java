@@ -4,6 +4,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class VehiculoTest {
+    @Test
+    public void testMarcaCoincide(){
+        Vehiculo vehiculo = new Vehiculo("Chevrolet", "Camaro", 100);
+        assertTrue(vehiculo.esMarca("chevrolet"));
+    }
 
     @Test
     public void testFrenoNormal() {
@@ -29,5 +34,4 @@ public class VehiculoTest {
         vehiculo.frenar(40); //velocidad actual 0
         assertEquals(0,vehiculo.getVelocidadActual());
     }
-
 }
