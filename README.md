@@ -51,3 +51,13 @@ Este proyecto consiste en desarrollar una clase **Vehículo** usando **Test Driv
 | `getInfo`          | Obtener información              | `marca="Tesla"`, `deportivo=true`     | String con todos los datos | Formato claro               |
 | `esMarca`          | Comparar marca                   | `marca="Tesla"`                       | `true`/`false`         | Case-sensitive? Se aplica a modelo tambien              |
 | `esIgual`          | Comparar vehículos               | `vehículo1 == vehículo2`              | `true`/`false`         | Por atributos clave          |
+
+## Contribución
+
+Agradecemos tu interés en contribuir al proyecto. Antes de enviar un Pull Request, asegúrate de que:
+
+- Todos los tests se ejecuten correctamente.
+- Se cumplan las guías de estilo y formato definidas en el proyecto.
+
+**Importante:**  
+Se ha activado una protección en la rama principal que requiere que los status checks (por ejemplo, el workflow "CI - Java Tests") se aprueben antes de permitir el merge. Esto garantiza la estabilidad del código y evita que se integren cambios que rompan la funcionalidad.
