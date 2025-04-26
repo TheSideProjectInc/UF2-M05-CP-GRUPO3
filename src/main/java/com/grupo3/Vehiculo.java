@@ -10,7 +10,7 @@ public class Vehiculo {
 
 //se añade metodo para definir si un coche es deportivo 
     public boolean esDeportivo() {
-        //pendiente de implementacion 
+        return deportivo;
     }
   
 }
