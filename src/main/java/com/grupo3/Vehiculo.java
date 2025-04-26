@@ -8,7 +8,6 @@ public class Vehiculo {
     private boolean deportivo;
     private boolean pasajeros;
 
-
   public Vehiculo(String marca, String modelo, int velocidad_maxima, boolean deportivo) {
         this.marca = marca;
         this.modelo = modelo;
@@ -78,5 +77,15 @@ public class Vehiculo {
                 ", Velocidad Máxima: " + velocidad_maxima +
                 ", Deportivo: " + deportivo +
                 ", Pasajeros: " + pasajeros;
+    }
+      
+  public int getVelocidadMaxima() {
+        return velocidad_maxima;
+    }
+    
+  public void setVelocidadMaxima(int velocidad_maxima) {
+        if (velocidad_maxima > 0) {
+            this.velocidad_maxima = velocidad_maxima;
+        }
     }
 }
