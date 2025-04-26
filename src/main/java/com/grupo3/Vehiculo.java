@@ -11,4 +11,10 @@ public class Vehiculo {
     public int getVelocidadMaxima() {
         return velocidad_maxima;
     }
+
+    public void setVelocidadMaxima(int velocidad_maxima) {
+        if (velocidad_maxima > 0) {
+            this.velocidad_maxima = velocidad_maxima;
+        }
+    }
 }
