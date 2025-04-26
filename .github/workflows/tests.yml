@@ -41,7 +41,7 @@ jobs:
 
       # Paso 7: Instalar dependencias del proyecto
       - name: Install dependencies
-        run: mvn install
+        run: mvn install --file src/pom.xml install
 
       # Paso 8: Ejecutar tests del proyecto
       - name: Run tests
