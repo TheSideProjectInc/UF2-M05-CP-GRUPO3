@@ -5,7 +5,9 @@ public class VehiculoTest {
 
     @Test
     public void testAceleracionNormal() {
-        // Test pendiente de implementación
+        Vehiculo v = new Vehiculo("Toyota", "Corolla", 50, 120, false, 5);
+        v.acelerar(30); // Acelerar de 50 a 80
+        assertEquals(80, v.getVelocidadActual(), "La aceleración debe aumentar correctamente");
     }
 
     @Test
