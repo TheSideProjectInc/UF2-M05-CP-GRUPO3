@@ -20,7 +20,20 @@
     </dependencies>
 
     <build>
+        <sourceDirectory>src/main/com3/java</sourceDirectory>
+        <testSourceDirectory>src/test/com3/java</testSourceDirectory>
+        
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            
             <!-- Plugin para usar JUnit 5 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -28,8 +41,22 @@
                 <version>3.0.0-M7</version>
                 <configuration>
                     <includes>
-                        <include>**/*Test.java</include>
+                        <include>**/*VehiculoTest.java</include>
                     </includes>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.4.1</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>com.grupo3.Main</mainClass>
+                        </manifest>
+                    </archive>
                 </configuration>
             </plugin>
         </plugins>
