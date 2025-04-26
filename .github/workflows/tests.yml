@@ -7,27 +7,46 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Paso 1: Clonar el repositorio
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # Paso 2: Mostrar la ubicación actual para depurar
       - name: Debug current directory
-        run: pwd && ls -la  # Esto mostrará la estructura del repositorio en el log
+        run: pwd && ls -la
 
+      # Paso 3: Configurar el JDK (usando Temurin y Java 17)
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
-          java-version: '21'  # Se puede ajustar según sea necesario
+          java-version: '17'
 
+      # Paso 4: Verificar que Java y Maven estén instalados
       - name: Verify Java installation
-        run: java -version && mvn -version  # Verifica que Java y Maven están instalados correctamente
+        run: java -version && mvn -version
 
-        # Moverse a la carpeta donde se encuentra el pom.xml, en este caso "src"
+      # Paso 5: Cache de dependencias de Maven para acelerar el build
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      # Paso 6: Cambiarse al directorio donde está el pom.xml; en este caso, "src"
       - name: Move to project directory (src)
         run: cd src && pwd && ls -la
 
+      # Paso 7: Instalar dependencias del proyecto
       - name: Install dependencies
         run: mvn install
 
+      # Paso 8: Ejecutar tests del proyecto
       - name: Run tests
         run: mvn test
+
+      # Paso 9 (este paso es opcional): Se compilar el proyecto y ejecutar tests en uno solo
+      - name: Build with Maven
+        run: mvn clean install
