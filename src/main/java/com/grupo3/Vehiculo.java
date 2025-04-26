@@ -6,7 +6,6 @@ public class Vehiculo {
     private int velocidad_actual;
     private int velocidad_maxima;
     private boolean deportivo;
-    private boolean pasajeros;
 
     public Vehiculo(String marca, String modelo, int velocidad_maxima, boolean deportivo) {
         this.marca = marca;
