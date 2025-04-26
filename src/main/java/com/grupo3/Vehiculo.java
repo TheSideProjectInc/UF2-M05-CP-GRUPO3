@@ -8,11 +8,16 @@ public class Vehiculo {
     private boolean deportivo;
     private boolean pasajeros;
 
-    public Vehiculo(String marca, String modelo, int velocidad_maxima) {
+    public Vehiculo(String marca, String modelo, int velocidad_maxima, boolean deportivo) {
         this.marca = marca;
         this.modelo = modelo;
         this.velocidad_maxima = velocidad_maxima;
         this.velocidad_actual = 0;
+        this.deportivo = deportivo;
+    }
+
+    public boolean esModelo(String modelo) {
+        return this.modelo.equalsIgnoreCase(modelo);
     }
 
     public boolean esMarca(String marca) {
@@ -34,7 +39,6 @@ public class Vehiculo {
             velocidad_actual -= decremento; // Resta normal en cualquier caso válido
         }
     }
-
 }
 
 
