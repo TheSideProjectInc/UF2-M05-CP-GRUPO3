@@ -17,6 +17,6 @@ public class Vehiculo {
     }
 
     public boolean esModelo(String modelo) {
-        
+        return this.modelo.equalsIgnoreCase(modelo);
     }
 }
