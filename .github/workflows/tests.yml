@@ -10,7 +10,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Ensure Maven runs from the correct directory
+      - name: Debug current directory
         run: pwd && ls -la  # Esto mostrará la estructura del repositorio en el log
 
       - name: Set up JDK
@@ -19,11 +19,11 @@ jobs:
           distribution: 'temurin'
           java-version: '21'  # Se puede ajustar según sea necesario
 
+      - name: Verify Java installation
+        run: java -version && mvn -version  # Verifica que Java y Maven están instalados correctamente
+
       - name: Install dependencies
         run: mvn install
 
       - name: Run tests
         run: mvn test
-
-      - name: Verify Java installation
-        run: java -version && mvn -version  # Verificacion para que Java y Maven están instalados correctamente
