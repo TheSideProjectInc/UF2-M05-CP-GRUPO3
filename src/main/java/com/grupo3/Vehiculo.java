@@ -10,6 +10,7 @@ public class Vehiculo {
 
 
     public boolean esIgual(Vehiculo otro) {
-
+        if (otro == null) return false;
+        return this.marca.equalsIgnoreCase(otro.marca) && this.modelo.equalsIgnoreCase(otro.modelo);
     }
 }
